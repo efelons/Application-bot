@@ -1,0 +1,4 @@
+discord.py==1.7.3
+discord-components==1.0.3
+aiosqlite==0.17.0
+python-dotenv==1.0.0
