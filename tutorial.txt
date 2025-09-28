@@ -1,0 +1,144 @@
+# Better Application Bot (discord.py v1.7.3)
+
+A self-hostable Discord Application Bot inspired by **Appy**, but with more commands, features, and flexibility.
+Built with `discord.py v1.7.3`, `discord-components`, and `aiosqlite`.
+
+---
+
+## ✨ Features
+
+* Create unlimited **application forms** (`!createform`, `!addquestion`)
+* Users can apply with `!apply <form>`
+* Applications saved to **SQLite database**
+* Review applications with **buttons** (Accept / Deny)
+* Assign a role to accepted applicants automatically
+* Cooldowns and reapply settings
+* Export applications for record-keeping
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the project
+
+```bash
+git clone https://github.com/your-username/better-application-bot.git
+cd better-application-bot
+```
+
+### 2. Install dependencies
+
+It’s recommended to use a virtual environment:
+
+```bash
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+### 3. Configure your environment
+
+Copy `.env.example` → `.env` and edit:
+
+```
+BOT_TOKEN=your_discord_bot_token
+PREFIX=!
+OWNER_ID=your_discord_user_id
+```
+
+⚠️ **Never share your `.env` file** — it contains your bot token.
+
+### 4. Run the bot
+
+```bash
+python bot.py
+```
+
+---
+
+## 🛠️ Commands
+
+### User Commands
+
+* `!forms` → List all available forms
+* `!apply <form>` → Start an application
+* Applications are answered in **DMs** and submitted automatically.
+
+### Admin Commands
+
+* `!createform staff "Staff Application"` → Create a form
+* `!addquestion staff "Why do you want to be staff?"` → Add questions
+* `!listforms` → Show all forms
+* `!setreview staff #review-channel` → Set review channel
+* `!setacceptrole staff @Staff` → Set accept role
+* `!removequestion staff 0` → Remove a question by index
+* `!pending` → Show pending applications
+* `!review <id>` → Show application with buttons
+* `!accept <id> [reason]` → Accept manually
+* `!deny <id> [reason]` → Deny manually
+
+---
+
+## 📝 Example Setup
+
+1. Create a form:
+
+   ```
+   !createform staff "Staff Application"
+   ```
+2. Add questions:
+
+   ```
+   !addquestion staff "Why do you want to join?"
+   !addquestion staff "Do you have prior experience?"
+   ```
+3. Set a review channel:
+
+   ```
+   !setreview staff #applications
+   ```
+4. Set an accepted role:
+
+   ```
+   !setacceptrole staff @Staff
+   ```
+5. Applicants can now run:
+
+   ```
+   !apply staff
+   ```
+
+---
+
+## 📦 File Structure
+
+```
+better-application-bot/
+├── bot.py
+├── cogs/
+│   ├── applications.py
+│   ├── admin.py
+│   └── review.py
+├── config/
+│   └── forms.json
+├── data/
+│   └── app.db
+├── requirements.txt
+├── .env.example
+└── README.md
+```
+
+---
+
+## 📩 Need Help?
+
+If you run into issues or need extra help, feel free to reach out:
+
+* **Discord:** `efelons` or `bleedfast`
+* **Instagram:** [@baehelpren_](https://instagram.com/baehelpren_)
+
+---
+
+## ⚖️ License
+
+This project is open source. Feel free to use, modify, and contribute!
