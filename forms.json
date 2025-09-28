@@ -1,0 +1,13 @@
+{
+    "staff": {
+        "name": "Staff Application",
+        "questions": [
+            "Why do you want to be staff?",
+            "Describe any previous moderation experience",
+            "How many hours can you help?"
+        ],
+        "review_channel_id": null,
+        "accept_role_id": null,
+        "reapply_cooldown_days": 30
+    }
+}
